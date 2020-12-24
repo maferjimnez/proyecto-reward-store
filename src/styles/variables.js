@@ -3,6 +3,7 @@ const variables = {
     secondayBlue: '#b2fcff',
     lightBackground: '#ecfcff',
     gray: '#f1f6f9',
+    darkerGray: '#9ba4b4',
     white: '#ffff',
     colorShadow: '#babecc'
 };

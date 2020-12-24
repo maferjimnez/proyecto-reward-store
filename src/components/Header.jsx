@@ -12,24 +12,40 @@ const HeaderConteiner = styled.header`
     display: flex;
     justify-content: space-between;
 
-    @media (min-width: 320px) {
+    @media (max-width: 768px) {
+        height: 18vh;
         padding: 1rem;
         flex-direction: column;
+        font-size: 13px;
     };
 `;
 
 const LeftConteiner = styled.div`
-    width: 40%;
+    width: 35%;
     display: flex;
     justify-content: space-between;
 
+    @media (max-width: 768px){
+        width: 100%;
+    }
 `; 
 
 const UserInfo = styled.div`
-    width: 18%;
+    width: 16%;
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @media (max-width: 768px){
+        width: 100%;
+        border-top: 1px solid ${variables.darkerGray};
+        padding-top: 6px;
+        justify-content: flex-end;
+
+        p{
+            margin-right: 15px;
+        }
+    }
 `;
 
 const UserCoins = styled.div`
@@ -38,6 +54,10 @@ const UserCoins = styled.div`
     background-color: ${variables.gray};
     display: flex;
     align-items: center;
+
+    span{
+        margin-right: 5px;
+    }
 `;
 
 function Header () {

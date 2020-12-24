@@ -5,9 +5,13 @@ import variables from '../styles/variables';
 
 
 const NavbarConteiner = styled.nav`
-    width: 75%;
+    width: 80%;
     display: flex;
     align-items: center;
+
+    @media (max-width: 768px){
+        width: 75%
+    }
 `;
 
 const NavbarList = styled.ul`
@@ -22,6 +26,10 @@ const NavbarItems = styled.li`
     background-color: ${variables.white};
     border-radius: 20px;
     box-shadow: -5px -5px 20px ${variables.white}, 3px 4px 4px ${variables.colorShadow};
+
+    @media (max-width: 768px){
+        padding: 8px 7px;
+    }
 `;
 
 function Navbar () {
