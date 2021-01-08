@@ -4,6 +4,7 @@ const variables = {
     lightBackground: '#ecfcff',
     gray: '#f1f6f9',
     darkerGray: '#9ba4b4',
+    darkGrayFont: '#727984',
     white: '#ffff',
     colorShadow: '#babecc'
 };
