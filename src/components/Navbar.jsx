@@ -22,11 +22,14 @@ const NavbarList = styled.ul`
 `;
 
 const NavbarItems = styled.li`
-    padding: 10px 15px;
-    background-color: ${variables.white};
-    border-radius: 20px;
-    box-shadow: -5px -5px 20px ${variables.white}, 3px 4px 4px ${variables.colorShadow};
+    padding: 6px 7px;
+    cursor: pointer;
+    text-transform: uppercase;
 
+    :hover{
+        border-bottom: solid ${variables.secondayBlue};
+        font-weight: 600;
+    }
     @media (max-width: 768px){
         padding: 8px 7px;
     }
