@@ -14,9 +14,12 @@ const HeroConteiner = styled.div`
 
 const HeroTitle = styled.div`
     margin: 0 0 4rem 7rem; 
-    color: ${variables.white};
     font-size: 2rem;
     align-self: flex-end;
+
+    h1{
+        color: ${variables.white};
+    }
 `;
 
 function Hero () {
