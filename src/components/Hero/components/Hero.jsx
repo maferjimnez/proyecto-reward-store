@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from "styled-components";
 // assets
-import background from '../assets/header-x2.png';
-import variables from '../styles/variables';
+import background from '../images/header-x2.png';
+import variables from '../../../styles/variables';
 
 
 const HeroConteiner = styled.div`

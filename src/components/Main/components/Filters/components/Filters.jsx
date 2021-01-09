@@ -5,7 +5,7 @@ import Pagination from './ProductsPagination';
 import FiltersSearch from './SearchFilters';
 // assets 
 import ArrowRightIcon from '../assets/images/arrow-right.svg';
-import variables from '../../../styles/variables';
+import variables from '../../../../../styles/variables';
 
 const FiltersContainer = styled.div`
     padding-bottom: 25px;

@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from "styled-components";
 // assets
-import variables from '../../../styles/variables';
+import variables from '../../../../../styles/variables';
 
 const PaginationContainer = styled.div`
     width: 23%;

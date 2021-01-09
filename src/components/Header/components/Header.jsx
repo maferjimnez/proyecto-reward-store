@@ -1,9 +1,9 @@
 import React from 'react';
 import styled from "styled-components";
 // assets
-import logo from '../assets/aerolab-logo.svg';
-import coinIcon from '../assets/icons/coin.svg';
-import variables from '../styles/variables';
+import logo from '../images/aerolab-logo.svg';
+import coinIcon from '../images/coin.svg';
+import variables from '../../../styles/variables';
 //components
 import Navbar from './Navbar';
 
@@ -68,7 +68,7 @@ function Header () {
                 <Navbar />            
             </LeftConteiner>
             <UserInfo>
-                <p>Larry Capinga</p>
+                <p>User</p>
                 <UserCoins>
                     <span>6000</span>
                     <img src={coinIcon} alt="Ícono de moneda"/>
