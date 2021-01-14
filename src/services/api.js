@@ -21,3 +21,19 @@ export const fetchUser = async (userData, setUserData) => {
         console.log('error', error);
     };
 };
+
+export const fetchProduct = async (products, setProduct) => {
+    let requestOptions = {
+        method: 'GET',
+        headers: myHeaders,
+        redirect: 'follow'
+    };
+
+    try {
+        const productResult = await fetch("https://coding-challenge-api.aerolab.co/products", requestOptions)
+        const newProduct = await productResult.json();
+        setProduct(newProduct);
+    } catch (error) {
+        console.log('error', error);
+    };
+};
