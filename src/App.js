@@ -8,12 +8,12 @@ import { UserProvider } from './components/Context/UserContext';
 function App() {
   return (
     <UserProvider>
-      <GlobalStyles/>
-      <Header />
-      <Hero />
-      <Main />
+        <GlobalStyles/>
+        <Header />
+        <Hero />
+        <Main />
     </UserProvider>
   );
-}
+};
 
 export default App;

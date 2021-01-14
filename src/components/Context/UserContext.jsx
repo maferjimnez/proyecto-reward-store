@@ -1,5 +1,5 @@
 import React, { createContext, useEffect, useState } from 'react';
-import { fetchUser } from '../../services/api';
+import { fetchUser, fetchProduct } from '../../services/api';
 
 export const UserContext = createContext();
 
@@ -9,14 +9,17 @@ export const UserProvider = (props) => {
 		points: 0,
 		redeemHistory: []
     });
+
+    const [products, setProduct] = useState([]);
     
     useEffect(() => {
         fetchUser(userData, setUserData);
-        console.log(userData);
+        fetchProduct(products, setProduct);
+        console.log(products);
      }, []);
      
     return (
-        <UserContext.Provider value={[userData, setUserData]}>
+        <UserContext.Provider value={[userData, setUserData], [products, setProduct]}>
             {props.children}
         </UserContext.Provider>
     );
