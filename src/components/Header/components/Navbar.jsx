@@ -3,7 +3,6 @@ import styled from "styled-components";
 // assets 
 import variables from '../../../styles/variables';
 
-
 const NavbarConteiner = styled.nav`
     width: 80%;
     display: flex;
@@ -24,7 +23,6 @@ const NavbarList = styled.ul`
 const NavbarItems = styled.li`
     padding: 6px 7px;
     cursor: pointer;
-    text-transform: uppercase;
 
     :hover{
         border-bottom: solid ${variables.secondayBlue};
@@ -39,9 +37,9 @@ function Navbar () {
     return(
         <NavbarConteiner>
             <NavbarList>
-                <NavbarItems>Tienda</NavbarItems>
-                <NavbarItems>Mis compras</NavbarItems>
-                <NavbarItems>Canjear puntos</NavbarItems>
+                <NavbarItems>Store</NavbarItems>
+                <NavbarItems>Purchases</NavbarItems>
+                <NavbarItems>Get more coins</NavbarItems>
             </NavbarList>
         </NavbarConteiner>
     );
