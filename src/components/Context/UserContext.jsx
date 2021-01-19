@@ -15,11 +15,18 @@ export const UserProvider = (props) => {
     useEffect(() => {
         fetchUser(userData, setUserData);
         fetchProduct(products, setProduct);
-        console.log(products);
+        console.log(userData);
      }, []);
      
     return (
-        <UserContext.Provider value={[userData, setUserData], [products, setProduct]}>
+        <UserContext.Provider
+        value={{
+            userData,
+            setUserData,
+            products,
+            setProduct
+            }}
+        >
             {props.children}
         </UserContext.Provider>
     );

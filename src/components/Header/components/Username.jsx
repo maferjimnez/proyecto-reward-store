@@ -6,7 +6,7 @@ import coinIcon from '../images/coin.svg';
 import variables from '../../../styles/variables';
 
 function UserName () {
-    const [userData] = useContext(UserContext);
+   const {userData} = useContext(UserContext);
 
     return(
         <UserInfo>
@@ -20,16 +20,13 @@ function UserName () {
 };
 
 const UserInfo = styled.div`
-    width: 13%;
+    width: 80%;
     display: flex;
     justify-content: space-between;
     align-items: center;
 
-    @media (max-width: 768px){
-        width: 100%;
-        border-top: 1px solid ${variables.darkerGray};
-        padding-top: 6px;
-        justify-content: flex-end;
+    @media (min-width: 768px){
+        width: 13%;
 
         p{
             margin-right: 15px;
