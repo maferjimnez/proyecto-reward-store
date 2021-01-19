@@ -6,6 +6,8 @@ myHeaders.append(
 myHeaders.append('Content-Type', 'application/json');
 myHeaders.append("Cookie", "__cfduid=dc5dbb433c5a97c760c25ef0361082f391610387087");
 
+const API_URL = "https://coding-challenge-api.aerolab.co";
+
 export const fetchUser = async (userData, setUserData) => {
     let requestOptions = {
         method: 'GET',
@@ -14,7 +16,7 @@ export const fetchUser = async (userData, setUserData) => {
     };
 
     try {
-        const userResult = await fetch("https://coding-challenge-api.aerolab.co/user/me", requestOptions);
+        const userResult = await fetch(`${API_URL}/user/me`, requestOptions);
         const newUser = await userResult.json();
         setUserData(newUser);
     } catch (error) {
@@ -30,7 +32,7 @@ export const fetchProduct = async (products, setProduct) => {
     };
 
     try {
-        const productResult = await fetch("https://coding-challenge-api.aerolab.co/products", requestOptions)
+        const productResult = await fetch(`${API_URL}/products`, requestOptions)
         const newProduct = await productResult.json();
         setProduct(newProduct);
     } catch (error) {
