@@ -64,6 +64,7 @@ const NavbarList = styled.ul`
   position: absolute;
   top: 10vh;
   left: 0;
+  z-index: 1000;
   background-color: ${variables.secondayBlue};
   list-style: none;
   display: ${({ menuOpen }) => (menuOpen ? 'flex' : 'none')};
