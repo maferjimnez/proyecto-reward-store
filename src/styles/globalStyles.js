@@ -8,6 +8,7 @@ const GlobalStyle = createGlobalStyle`
 	box-sizing: border-box;
 	font-family: 'Roboto', sans-serif;
 	color: ${variables.darkGrayFont};
+	scroll-behavior: smooth;
 }`;
 
 export default GlobalStyle

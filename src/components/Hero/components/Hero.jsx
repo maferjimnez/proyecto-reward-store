@@ -1,35 +1,58 @@
 import React from 'react';
-import styled from "styled-components";
+import styled from 'styled-components';
 // assets
 import background from '../images/header-x2.png';
 import variables from '../../../styles/variables';
 
+function Hero() {
+  return (
+    <HeroConteiner>
+      <HeroBackground
+        src={background}
+        alt="Imágen de auriculares con fondo color azul claro."
+      />
+      <HeroTitle>
+        <h1>Rewards Store</h1>
+      </HeroTitle>
+    </HeroConteiner>
+  );
+}
 
 const HeroConteiner = styled.div`
-    height: 65vh;
-    background: url(${background}) no-repeat;
-    background-size: cover;
-    display: flex;
+  /* background: url(${background}) no-repeat;
+  background-size: cover; */
+  display: flex;
+
+  @media (min-width: 500px) {
+  }
+
+  @media (min-width: 900px) {
+  }
+`;
+
+const HeroBackground = styled.img`
+  width: 100%;
 `;
 
 const HeroTitle = styled.div`
-    margin: 0 0 4rem 7rem; 
+  position: absolute;
+  top: 9rem;
+  left: 2rem;
+  font-size: 0.8rem;
+  h1 {
+    color: ${variables.white};
+  }
+
+  @media (min-width: 500px) {
+    top: 12rem;
+    font-size: 1rem;
+  }
+
+  @media (min-width: 900px) {
+    top: 28rem;
+    left: 4rem;
     font-size: 2rem;
-    align-self: flex-end;
-
-    h1{
-        color: ${variables.white};
-    }
+  }
 `;
-
-function Hero () {
-    return(
-        <HeroConteiner>
-            <HeroTitle>
-                <h1>Electronics</h1>
-            </HeroTitle>
-        </HeroConteiner>
-    );
-};
 
 export default Hero;
