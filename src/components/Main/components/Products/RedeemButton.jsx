@@ -1,12 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
 // assets
-import shopIcon from './images/buy-blue.svg';
+import blueBag from './images/buy-blue.svg';
+import whiteBag from './images/buy-white.svg';
 
 function RedeemButton() {
   return (
     <ImgWrapper>
-      <img src={shopIcon} alt="Icono de bolsa de compra" />
+      <img src={blueBag} alt="Icono de bolsa de compra" />
     </ImgWrapper>
   );
 }

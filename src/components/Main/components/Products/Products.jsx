@@ -8,12 +8,12 @@ function Products() {
   console.log(products);
 
   return (
-    <div>
+    <ProductsWrapper>
       {products.products.map((product) => (
         <Product {...product} key={product._id} />
       ))}
       ;
-    </div>
+    </ProductsWrapper>
   );
 }
 
@@ -21,6 +21,12 @@ const ProductsWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  @media (min-width: 500px) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
 `;
 
 export default Products;

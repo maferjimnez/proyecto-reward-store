@@ -13,8 +13,8 @@ function Product(props) {
       <RedeemButton />
       <img src={img.url} alt={`Imagen de ${props.name}`} />
       <ProductTextInfo>
-        <ProductName>{name}</ProductName>
         <ProductCategory>{category}</ProductCategory>
+        <ProductName>{name}</ProductName>
       </ProductTextInfo>
     </ProductContainer>
   );
