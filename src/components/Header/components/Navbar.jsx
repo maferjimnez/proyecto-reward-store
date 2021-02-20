@@ -5,6 +5,7 @@ import variables from '../../../styles/variables';
 // dependencies
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
+import { Link } from 'react-router-dom';
 
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -28,9 +29,15 @@ function Navbar() {
         )}
       </BurgerMenuIcon>
       <NavbarList menuOpen={menuOpen}>
-        <NavbarItems>Store</NavbarItems>
-        <NavbarItems>Purchases</NavbarItems>
-        <NavbarItems>Get more coins</NavbarItems>
+        <Link to="store">
+          <NavbarItems>Store</NavbarItems>
+        </Link>
+        <Link to="purchases">
+          <NavbarItems>Purchases</NavbarItems>
+        </Link>
+        <Link to="getcoins">
+          <NavbarItems>Get more coins</NavbarItems>
+        </Link>
       </NavbarList>
     </NavbarConteiner>
   );

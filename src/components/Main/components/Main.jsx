@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 // components
+// import Hero from '../../Hero/components/Hero';
 import Filters from './Filters/components/Filters';
 import Products from './Products/Products';
 
@@ -15,6 +16,7 @@ const MainContainer = styled.main`
 function Main() {
   return (
     <MainContainer>
+      {/* <Hero /> */}
       <Filters />
       <Products />
     </MainContainer>
