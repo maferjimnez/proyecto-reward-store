@@ -30,13 +30,13 @@ function Navbar() {
       </BurgerMenuIcon>
       <NavbarList menuOpen={menuOpen}>
         <Link to="store">
-          <NavbarItems>Store</NavbarItems>
+          <NavbarItems onClick={displayMenu}>Store</NavbarItems>
         </Link>
         <Link to="purchases">
-          <NavbarItems>Purchases</NavbarItems>
+          <NavbarItems onClick={displayMenu}>Purchases</NavbarItems>
         </Link>
         <Link to="getcoins">
-          <NavbarItems>Get more coins</NavbarItems>
+          <NavbarItems onClick={displayMenu}>Get more coins</NavbarItems>
         </Link>
       </NavbarList>
     </NavbarConteiner>
