@@ -39,3 +39,24 @@ export const fetchProduct = async (products, setProduct) => {
         console.log('error', error);
     };
 };
+
+export const fetchGetPoints = async (amount, userData, setUserData) => {
+	let raw = JSON.stringify({ amount: amount });
+
+	let requestOptions = {
+		method: 'POST',
+		headers: myHeaders,
+		body: raw,
+		redirect: 'follow'
+	};
+
+	try {
+		const result = await fetch(`${API_URL}/user/points`, requestOptions);
+		const newPointsData = await result.json();
+		const newPointsState = { ...userData };
+		newPointsState.points = newPointsData['New Points'];
+		setUserData(newPointsState);
+	} catch (error) {
+		console.log('error', error);
+	}
+};

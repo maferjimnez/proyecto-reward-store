@@ -45,6 +45,10 @@ const UserCoins = styled.div`
   span {
     margin-right: 5px;
   }
+
+  img {
+    width: 2rem;
+  }
 `;
 
 export default UserName;
