@@ -1,15 +1,32 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import styled from 'styled-components';
+import { fetchProduct } from '../../../../services/api';
 import { UserContext } from '../../../Context/UserContext';
 import Product from './Product';
 
 function Products() {
-  const products = useContext(UserContext);
-  console.log(products);
+  const { products, setProduct } = useContext(UserContext);
+  const { allProducts, setAllProducts } = useContext(UserContext);
+  const { filter } = useContext(UserContext);
+
+  const filterByCategory = () => {
+    if (filter.category == 'all categories') {
+      setProduct(allProducts);
+    } else {
+      const productsFilteredByCategory = allProducts.filter(
+        (product) => filter.category == product.category
+      );
+      setProduct(productsFilteredByCategory);
+    }
+  };
+
+  useEffect(() => {
+    filterByCategory();
+  }, [filter]);
 
   return (
     <ProductsWrapper>
-      {products.products.map((product) => (
+      {products.map((product) => (
         <Product {...product} key={product._id} />
       ))}
       ;

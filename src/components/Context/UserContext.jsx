@@ -12,9 +12,17 @@ export const UserProvider = (props) => {
 
   const [products, setProduct] = useState([]);
 
+  const [allProducts, setAllProducts] = useState([]);
+
+  const [filter, setFilter] = useState({
+    category: 'all categories',
+    price: 'all prices',
+  });
+
   useEffect(() => {
-    fetchUser(userData, setUserData);
-    fetchProduct(products, setProduct);
+    fetchUser(setUserData);
+    fetchProduct(setProduct);
+    fetchProduct(setAllProducts);
   }, []);
 
   return (
@@ -24,6 +32,10 @@ export const UserProvider = (props) => {
         setUserData,
         products,
         setProduct,
+        filter,
+        setFilter,
+        allProducts,
+        setAllProducts,
       }}
     >
       {props.children}

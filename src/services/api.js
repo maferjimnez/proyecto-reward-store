@@ -8,7 +8,7 @@ myHeaders.append("Cookie", "__cfduid=dc5dbb433c5a97c760c25ef0361082f391610387087
 
 const API_URL = "https://coding-challenge-api.aerolab.co";
 
-export const fetchUser = async (userData, setUserData) => {
+export const fetchUser = async (setUserData) => {
     let requestOptions = {
         method: 'GET',
         headers: myHeaders,
@@ -24,7 +24,7 @@ export const fetchUser = async (userData, setUserData) => {
     };
 };
 
-export const fetchProduct = async (products, setProduct) => {
+export const fetchProduct = async (setProduct) => {
     let requestOptions = {
         method: 'GET',
         headers: myHeaders,
