@@ -16,21 +16,41 @@ function Hover(props) {
     setUserData({ ...userData, points: userNewPoints });
   }
 
+  function displayHover(productCost, userPoints) {
+    if (productCost > userPoints) {
+      return (
+        <HoverInfoNoPoints>
+          <HoverText>
+            {productCost}
+            <Coin src={coin} alt="Ilustration of a coin" />
+          </HoverText>
+          <HoverRedeem>
+            <RedeemPoints>You need {productCost - userPoints}</RedeemPoints>
+          </HoverRedeem>
+        </HoverInfoNoPoints>
+      );
+    } else {
+      return (
+        <>
+          <HoverImg src={whiteBag} alt="Ilustration of a shopping bag" />
+          <HoverInfo>
+            <HoverText>
+              {productCost}
+              <Coin src={coin} alt="Ilustration of a coin" />
+            </HoverText>
+            <HoverButton
+              onClick={() => redeemProduct(productId, productCost, userPoints)}
+            >
+              Redeem now.
+            </HoverButton>
+          </HoverInfo>
+        </>
+      );
+    }
+  }
+
   return (
-    <HoverContainer>
-      <HoverImg src={whiteBag} alt="Ilustration of a shopping bag" />
-      <HoverInfo>
-        <HoverText>
-          {productCost}
-          <Coin src={coin} alt="Ilustration of a coin" />
-        </HoverText>
-        <HoverButton
-          onClick={() => redeemProduct(productId, productCost, userPoints)}
-        >
-          Redeem now.
-        </HoverButton>
-      </HoverInfo>
-    </HoverContainer>
+    <HoverContainer>{displayHover(productCost, userPoints)}</HoverContainer>
   );
 }
 
@@ -52,6 +72,15 @@ const HoverImg = styled.img`
   margin: 0.9rem 0.3rem;
   width: 3.5rem;
   align-self: flex-end;
+`;
+
+const HoverInfoNoPoints = styled.div`
+  margin-top: 53%;
+  width: 90%;
+  margin-bottom: 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `;
 
 const HoverInfo = styled.div`
@@ -89,6 +118,19 @@ const HoverText = styled.p`
   color: ${variables.white};
   font-size: 2rem;
   font-weight: 300;
+`;
+
+const HoverRedeem = styled.div`
+  padding: 1rem;
+  width: 100%;
+  border-radius: 30px;
+  background-color: rgb(84 87 90 / 80%);
+  display: flex;
+  justify-content: center;
+`;
+
+const RedeemPoints = styled.p`
+  color: white;
 `;
 
 export default Hover;

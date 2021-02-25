@@ -25,7 +25,7 @@ function Products() {
       );
       setProduct(productsFilteredByCategory);
     }
-  };opción de compra 
+  };
 
   useEffect(() => {
     filterByCategory();
