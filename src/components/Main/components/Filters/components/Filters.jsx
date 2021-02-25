@@ -1,27 +1,27 @@
 import React from 'react';
 import styled from 'styled-components';
 // components
-import Pagination from './ProductsPagination';
-import FiltersSearch from './SearchFilters';
+import CategoryFilters from './CategoryFilters';
 // assets
 import variables from '../../../../../styles/variables';
 
 const FiltersContainer = styled.div`
-  margin-bottom: 2rem;
-  padding-bottom: 25px;
-  border-bottom: 1px solid ${variables.darkerGray};
+  padding-bottom: 2rem;
+  border-bottom: 1px solid;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
   font-size: 18px;
+  @media (min-width: 800px) {
+    align-items: flex-start;
+  }
 `;
 
 function Filters() {
   return (
     <FiltersContainer>
-      <FiltersSearch />
-      <Pagination />
+      <CategoryFilters />
     </FiltersContainer>
   );
 }

@@ -59,10 +59,17 @@ function Products() {
         handleNext={productsPaginated.nextPage}
         handlePrev={productsPaginated.prevPage}
       />
+
       {productsPaginated.currentData().map((product) => (
         <Product {...product} key={product._id} />
       ))}
-      ;
+
+      <ProductsPagination
+        currentPage={currentPage}
+        count={count}
+        handleNext={productsPaginated.nextPage}
+        handlePrev={productsPaginated.prevPage}
+      />
     </ProductsWrapper>
   );
 }
