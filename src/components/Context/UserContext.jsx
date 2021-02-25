@@ -8,6 +8,7 @@ export const UserProvider = (props) => {
     name: 'Loading...',
     points: 0,
     redeemHistory: [],
+    cost: 0,
   });
 
   const [products, setProduct] = useState([]);
