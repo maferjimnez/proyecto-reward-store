@@ -60,3 +60,20 @@ export const fetchGetPoints = async (amount, userData, setUserData) => {
 		console.log('error', error);
 	}
 };
+
+export const fetchRedeemProduct = async (productId) => {
+	let raw = JSON.stringify({ productId: productId });
+
+	let requestOptions = {
+		method: 'POST',
+		headers: myHeaders,
+		body: raw,
+		redirect: 'follow'
+	};
+
+	try {
+		await fetch(`${API_URL}/redeem`, requestOptions);
+	} catch (error) {
+		console.log('error', error);
+	}
+};
