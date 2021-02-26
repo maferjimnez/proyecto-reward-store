@@ -1,19 +1,28 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import { fetchRedeemProduct } from '../../../../services/api';
 // assets
 import coin from '../../../Header/images/coin.svg';
 import whiteBag from './images/buy-white.svg';
 import variables from '../../../../styles/variables';
+import RedeemModal from './RedeemModal';
 
 function Hover(props) {
-  const { productCost, productId, userPoints, userData, setUserData } = props;
+  const {
+    productCost,
+    productId,
+    userPoints,
+    userData,
+    setUserData,
+    productName,
+  } = props;
+  const [successRedeem, setSuccessRedeem] = useState(false);
 
   function redeemProduct(id, cost, userPoints) {
-    fetchRedeemProduct(id);
+    const redeemModalStatus = fetchRedeemProduct(id);
     const userNewPoints = userPoints - cost;
-    console.log(userData);
     setUserData({ ...userData, points: userNewPoints });
+    setSuccessRedeem(redeemModalStatus);
   }
 
   function displayHover(productCost, userPoints) {
@@ -38,11 +47,20 @@ function Hover(props) {
               {productCost}
               <Coin src={coin} alt="Ilustration of a coin" />
             </HoverText>
-            <HoverButton
+
+            <RedeemModal
+              redeemProduct={redeemProduct}
+              productId={productId}
+              productName={productName}
+              productCost={productCost}
+              userPoints={userPoints}
+              successRedeem={successRedeem}
+            />
+            {/* <HoverButton
               onClick={() => redeemProduct(productId, productCost, userPoints)}
             >
               Redeem now.
-            </HoverButton>
+            </HoverButton> */}
           </HoverInfo>
         </>
       );

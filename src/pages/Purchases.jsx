@@ -1,5 +1,6 @@
 import React, { useContext, useEffect } from 'react';
 import styled from 'styled-components';
+import variables from '../styles/variables';
 import { UserContext } from '../components/Context/UserContext';
 import PurchasedProduct from '../components/Main/components/Products/PurchasedProduct';
 import { fetchUserPurchases } from '../services/api';
@@ -14,7 +15,8 @@ function Purchases() {
 
   return (
     <PurchasesContainer>
-      <h1>Purchases:</h1>
+      <Title>Purchases:</Title>
+      <p>Products you've purchased.</p>
       <ProductsWrapper>
         {productsPurchased.map((product) => (
           <PurchasedProduct {...product} key={product.createDate} />
@@ -29,6 +31,9 @@ const PurchasesContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+`;
+const Title = styled.h1`
+  color: ${variables.primaryBLue};
 `;
 
 const ProductsWrapper = styled.div`

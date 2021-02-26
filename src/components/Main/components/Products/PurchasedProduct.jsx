@@ -25,7 +25,7 @@ const ProductContainer = styled.div`
   border-radius: 10px;
   display: flex;
   justify-content: center;
-  background-color: #f1f6f9;
+  box-shadow: 1px 2px 6px -2px rgba(0, 0, 0, 0.54);
 `;
 
 const ProductImg = styled.img`

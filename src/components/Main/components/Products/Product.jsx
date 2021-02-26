@@ -20,6 +20,7 @@ function Product(props) {
     >
       {productHover && (
         <Hover
+          productName={name}
           productCost={cost}
           productId={_id}
           userPoints={userData.points}

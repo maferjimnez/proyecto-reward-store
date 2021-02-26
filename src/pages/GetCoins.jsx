@@ -16,7 +16,7 @@ function GetCoins() {
 
   return (
     <Main>
-      <h1>Get more coins</h1>
+      <Title>Get more coins</Title>
       <p>Select the amount of coins you want to add</p>
       <ButtonsWrapper>
         <Button
@@ -53,6 +53,10 @@ const Main = styled.main`
   display: flex;
   flex-direction: column;
   align-items: center;
+`;
+
+const Title = styled.h1`
+  color: ${variables.primaryBLue};
 `;
 
 const Button = styled.button`
