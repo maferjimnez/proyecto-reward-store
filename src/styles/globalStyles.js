@@ -9,6 +9,7 @@ const GlobalStyle = createGlobalStyle`
 	font-family: 'Roboto', sans-serif;
 	color: ${variables.darkGrayFont};
 	scroll-behavior: smooth;
+	    transition: 0.3s ease-in;
 }`;
 
 export default GlobalStyle

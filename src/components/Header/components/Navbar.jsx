@@ -29,19 +29,23 @@ function Navbar() {
         )}
       </BurgerMenuIcon>
       <NavbarList menuOpen={menuOpen}>
-        <Link to="store">
+        <NavbarLink to="store">
           <NavbarItems onClick={displayMenu}>Store</NavbarItems>
-        </Link>
-        <Link to="purchases">
+        </NavbarLink>
+        <NavbarLink to="purchases">
           <NavbarItems onClick={displayMenu}>Purchases</NavbarItems>
-        </Link>
-        <Link to="getcoins">
+        </NavbarLink>
+        <NavbarLink to="getcoins">
           <NavbarItems onClick={displayMenu}>Get more coins</NavbarItems>
-        </Link>
+        </NavbarLink>
       </NavbarList>
     </NavbarConteiner>
   );
 }
+
+const NavbarLink = styled(Link)`
+  text-decoration: none;
+`;
 
 const NavbarConteiner = styled.nav`
   width: 100%;
@@ -97,14 +101,14 @@ const NavbarItems = styled.li`
   padding: 15px 7px;
   cursor: pointer;
   font-size: 20px;
-  font-weight: bold;
-
   :hover {
-    border-bottom: solid ${variables.secondayBlue};
-    font-weight: 600;
+    color: ${variables.white};
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    background-color: ${variables.primaryBLue};
   }
   @media (min-width: 500px) {
-    padding: 8px 7px;
+    padding: 0.5rem 1rem;
     font-size: initial;
     padding: 0;
   }
