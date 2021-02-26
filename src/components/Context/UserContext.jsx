@@ -1,5 +1,9 @@
 import React, { createContext, useEffect, useState } from 'react';
-import { fetchUser, fetchProduct } from '../../services/api';
+import {
+  fetchUser,
+  fetchProduct,
+  fetchUserPurchases,
+} from '../../services/api';
 
 export const UserContext = createContext();
 
@@ -13,6 +17,8 @@ export const UserProvider = (props) => {
 
   const [products, setProduct] = useState([]);
 
+  const [redeemedProducts, setRedeemedProducts] = useState([]);
+
   const [allProducts, setAllProducts] = useState([]);
 
   const [filter, setFilter] = useState({
@@ -24,6 +30,7 @@ export const UserProvider = (props) => {
     fetchUser(setUserData);
     fetchProduct(setProduct);
     fetchProduct(setAllProducts);
+    fetchUserPurchases(setRedeemedProducts);
   }, []);
 
   return (
@@ -37,6 +44,8 @@ export const UserProvider = (props) => {
         setFilter,
         allProducts,
         setAllProducts,
+        redeemedProducts,
+        setRedeemedProducts,
       }}
     >
       {props.children}

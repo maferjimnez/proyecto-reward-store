@@ -77,3 +77,19 @@ export const fetchRedeemProduct = async (productId) => {
 		console.log('error', error);
 	}
 };
+
+export const fetchUserPurchases = async (setRedeemedProducts) => {
+    let requestOptions = {
+        method: 'GET',
+        headers: myHeaders,
+        redirect: 'follow'
+    };
+
+    try {
+        const historyResult = await fetch(`${API_URL}/user/history`, requestOptions);
+		const productsRedeem = await historyResult.json();
+		setRedeemedProducts(productsRedeem);
+	} catch (error) {
+        console.log('error', error);
+    };
+};

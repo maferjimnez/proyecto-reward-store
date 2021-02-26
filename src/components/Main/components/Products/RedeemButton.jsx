@@ -3,7 +3,6 @@ import styled from 'styled-components';
 // assets
 import coin from '../../../Header/images/coin.svg';
 import blueBag from './images/buy-blue.svg';
-// import whiteBag from './images/buy-white.svg';
 
 function RedeemButton(props) {
   const { productCost, userPoints } = props;
@@ -27,6 +26,7 @@ function RedeemButton(props) {
     </RedeemContainer>
   );
 }
+
 const RedeemContainer = styled.div`
   z-index: 10;
   display: flex;

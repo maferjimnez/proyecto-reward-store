@@ -7,7 +7,6 @@ import arrowLeftIcon from '../assets/images/arrow-left.svg';
 
 function Pagination(props) {
   const { currentPage, count, handleNext, handlePrev } = props;
-  console.log(handleNext);
   return (
     <PaginationWrapper>
       <PaginationContainer>
