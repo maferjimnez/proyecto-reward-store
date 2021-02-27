@@ -13,12 +13,11 @@ function App() {
         <GlobalStyles/>
         <Router>
           <Header />
-          {/* <Switch> */}
-            <Route path="/" component={Store} exact/>
-            <Route path="/store" component={Store}/>
+          <Switch>
+            <Route exact path="/" component={Store} exact/>
             <Route path="/purchases" component={Purchases}/>
             <Route path="/getcoins" component={GetCoins}/>
-          {/* </Switch> */}
+          </Switch>
         </Router>
     </UserProvider>
   );

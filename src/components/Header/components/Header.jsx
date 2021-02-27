@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 // assets
 import logo from '../images/aerolab-logo.svg';
 //components
@@ -10,7 +11,9 @@ function Header() {
   return (
     <HeaderConteiner>
       <LeftConteiner>
-        <img src={logo} alt="Logo" />
+        <Link exact to="/">
+          <img src={logo} alt="Logo" />
+        </Link>
         <Navbar />
       </LeftConteiner>
       <UserName />
