@@ -29,7 +29,7 @@ function Navbar() {
         )}
       </BurgerMenuIcon>
       <NavbarList menuOpen={menuOpen}>
-        <NavbarLink to="store">
+        <NavbarLink exact to="/">
           <NavbarItems onClick={displayMenu}>Store</NavbarItems>
         </NavbarLink>
         <NavbarLink to="purchases">
