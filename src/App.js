@@ -5,7 +5,7 @@ import Store from './pages/Store';
 import Purchases from './pages/Purchases';
 import GetCoins from './pages/GetCoins';
 import { UserProvider } from './components/Context/UserContext';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { HashRouter as Router, Switch, Route } from 'react-router-dom';
 
 function App() {
   return (
