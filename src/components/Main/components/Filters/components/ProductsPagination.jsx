@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 // assets
-// import variables from '../../../../../styles/variables';
 import arrowRightIcon from '../assets/images/arrow-right.svg';
 import arrowLeftIcon from '../assets/images/arrow-left.svg';
 
