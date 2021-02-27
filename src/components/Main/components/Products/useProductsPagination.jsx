@@ -22,15 +22,9 @@ const useProductPagination = (
     setCurrentPage((currentPage) => Math.max(currentPage - 1, 1));
   }
 
-  //   function jumpPage(page) {
-  //     const pageNumber = Math.max(1, page);
-  //     setCurrentPage((currentPage) => Math.min(pageNumber, maxPage));
-  //   }
-
   return {
     nextPage,
     prevPage,
-    // jumpPage,
     currentData,
     maxPage,
   };

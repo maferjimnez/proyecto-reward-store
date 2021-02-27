@@ -1,6 +1,5 @@
 import React, { useContext, useEffect, useState } from 'react';
 import styled from 'styled-components';
-import { fetchProduct } from '../../../../services/api';
 import { UserContext } from '../../../Context/UserContext';
 import Product from './Product';
 import ProductsPagination from '../Filters/components/ProductsPagination';
@@ -10,11 +9,6 @@ function Products() {
   const { products, setProduct } = useContext(UserContext);
   const { allProducts } = useContext(UserContext);
   const { filter } = useContext(UserContext);
-  const [productsPaginate, setProductsPaginate] = useState([]);
-
-  // useEffect(() => {
-  //   setProductsPaginate([...products]);
-  // }, [products]);
 
   const filterByCategory = () => {
     if (filter.category == 'all categories') {
@@ -41,15 +35,6 @@ function Products() {
     currentPage,
     setCurrentPage
   );
-
-  // function handlePaginationNext(event, pageSelected) {
-  //   setCurrentPage(pageSelected);
-  //   productsPaginated.nextPage(pageSelected);
-  // }
-  // function handlePaginationPev(event, pageSelected) {
-  //   setCurrentPage(pageSelected);
-  //   productsPaginated.prevPage(pageSelected);
-  // }
 
   return (
     <ProductsWrapper>

@@ -56,11 +56,6 @@ function Hover(props) {
               userPoints={userPoints}
               successRedeem={successRedeem}
             />
-            {/* <HoverButton
-              onClick={() => redeemProduct(productId, productCost, userPoints)}
-            >
-              Redeem now.
-            </HoverButton> */}
           </HoverInfo>
         </>
       );
