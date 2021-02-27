@@ -9,17 +9,17 @@ import { HashRouter as Router, Switch, Route } from 'react-router-dom';
 
 function App() {
   return (
+    <Router>
     <UserProvider>
         <GlobalStyles/>
-        <Router>
           <Header />
           <Switch>
             <Route exact path="/" component={Store} exact/>
             <Route path="/purchases" component={Purchases}/>
             <Route path="/getcoins" component={GetCoins}/>
           </Switch>
-        </Router>
     </UserProvider>
+    </Router>
   );
 }; 
 
