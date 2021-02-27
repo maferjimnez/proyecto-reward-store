@@ -1,7 +1,6 @@
 import React, { useContext } from 'react';
 import styled from 'styled-components';
 import { UserContext } from '../../../../Context/UserContext';
-// assets
 
 function CategoryFilters() {
   const { allProducts } = useContext(UserContext);

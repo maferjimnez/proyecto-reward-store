@@ -21,6 +21,8 @@ function Header() {
   );
 }
 
+export default Header;
+
 const HeaderConteiner = styled.header`
   padding: 0 1rem 0 0;
   height: 10vh;
@@ -50,5 +52,3 @@ const LeftConteiner = styled.div`
     width: 30%;
   }
 `;
-
-export default Header;

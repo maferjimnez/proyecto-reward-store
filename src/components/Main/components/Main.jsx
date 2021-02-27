@@ -1,9 +1,19 @@
 import React from 'react';
 import styled from 'styled-components';
 // components
-// import Hero from '../../Hero/components/Hero';
 import Filters from './Filters/components/Filters';
 import Products from './Products/Products';
+
+function Main() {
+  return (
+    <MainContainer>
+      <Filters />
+      <Products />
+    </MainContainer>
+  );
+}
+
+export default Main;
 
 const MainContainer = styled.main`
   margin: 2rem;
@@ -12,15 +22,3 @@ const MainContainer = styled.main`
     margin: 2rem 6rem;
   }
 `;
-
-function Main() {
-  return (
-    <MainContainer>
-      {/* <Hero /> */}
-      <Filters />
-      <Products />
-    </MainContainer>
-  );
-}
-
-export default Main;

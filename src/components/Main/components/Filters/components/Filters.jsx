@@ -2,8 +2,14 @@ import React from 'react';
 import styled from 'styled-components';
 // components
 import CategoryFilters from './CategoryFilters';
-// assets
-import variables from '../../../../../styles/variables';
+
+function Filters() {
+  return (
+    <FiltersContainer>
+      <CategoryFilters />
+    </FiltersContainer>
+  );
+}
 
 const FiltersContainer = styled.div`
   padding-bottom: 2rem;
@@ -17,13 +23,5 @@ const FiltersContainer = styled.div`
     align-items: flex-start;
   }
 `;
-
-function Filters() {
-  return (
-    <FiltersContainer>
-      <CategoryFilters />
-    </FiltersContainer>
-  );
-}
 
 export default Filters;

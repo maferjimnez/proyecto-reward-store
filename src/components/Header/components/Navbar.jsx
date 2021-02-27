@@ -43,6 +43,8 @@ function Navbar() {
   );
 }
 
+export default Navbar;
+
 const NavbarLink = styled(Link)`
   text-decoration: none;
 `;
@@ -113,5 +115,3 @@ const NavbarItems = styled.li`
     padding: 0;
   }
 `;
-
-export default Navbar;

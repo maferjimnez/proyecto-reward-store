@@ -6,7 +6,7 @@ import variables from '../../../styles/variables';
 
 function Hero() {
   return (
-    <HeroConteiner>
+    <div>
       <HeroBackground
         src={background}
         alt="Imágen de auriculares con fondo color azul claro."
@@ -14,21 +14,9 @@ function Hero() {
       <HeroTitle>
         <h1>Rewards Store</h1>
       </HeroTitle>
-    </HeroConteiner>
+    </div>
   );
 }
-
-const HeroConteiner = styled.div`
-  /* background: url(${background}) no-repeat;
-  background-size: cover; */
-  display: flex;
-
-  @media (min-width: 500px) {
-  }
-
-  @media (min-width: 900px) {
-  }
-`;
 
 const HeroBackground = styled.img`
   width: 100%;
