@@ -2,7 +2,7 @@
 
 Proyecto final para la carrera Desarrollo Web Front-End con React en Acámica.
 
-##Sobre el proyecto:
+## Sobre el proyecto:
 Aplicación web de un e-commerce que permite a usuarios/as canjear puntos por productos, utilizando una API brindada por Aerolab.
 
 ## Tecnologías y recursos utilizados:
@@ -13,11 +13,11 @@ Aplicación web de un e-commerce que permite a usuarios/as canjear puntos por pr
 * Styled-components
 
 ## Features:
-* Mostrar nombre del uruario/a y puntos disponibles.
+* Mostrar nombre del usuario/a y puntos disponibles.
 * El usuario/a puede agregar puntos (1000, 5000 ó 7500).
 * El listado de productos está paginado con 16 productos cada página.
 * Filtrado de productos por categoría.
-* Si el usuario/a tienen la cantidad de puntos suficiente podrá canjearlo, sino, muestra la cantidad de puntos faltantes para el canje.
+* Si el usuario/a tiene la cantidad de puntos suficiente podrá canjear el producto, sino, muestra la cantidad de puntos faltantes para el canje.
 * El usuario/a puede acceder al historial de canjes.
 
 # Getting Started with Create React App
